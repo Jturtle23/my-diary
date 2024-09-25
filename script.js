@@ -43,8 +43,6 @@ if (window.location.search) {
 		j++;
 		if (j % 2 === 0) {
 			
-			confirm('Save changes?');
-			
 			// Read mode
 			editEntryButton.textContent = 'Edit Entry';
 			entryTextarea.disabled = true;
