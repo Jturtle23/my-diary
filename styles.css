@@ -1,0 +1,291 @@
+
+body {
+	margin: 0;
+	margin-bottom: 100px;
+	padding: 0;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+* {
+	font-family: arial;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background-color: #ffa366;
+	font-family: arial;
+}
+
+header a {
+	color: #000000;
+	text-decoration: none;
+}
+
+header h1 {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translate(0, -50%);
+	margin: 0;
+	font-size: 1.7em;
+	text-shadow: 0 0 4px #ffffff;
+}
+
+header .tab {
+	color: #000000;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+header .tab:hover {
+	text-decoration: underline;
+}
+
+header #github-mark {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translate(0, -50%);
+	height: 35px;
+	width: 35px;
+}
+
+
+/* START #writing-space */
+
+#writing-space {
+	width: 80%;
+	margin: 0 auto 20px auto;
+}
+
+#writing-space #write-an-entry {
+	text-align: center;
+	font-family: arial;
+}	
+
+#writing-space #entry-info {
+	text-align: center;
+	font-family: arial;
+}
+
+#writing-space #subject::placeholder, #date::placeholder {
+	color: #999999;
+}
+
+#writing-space #subject, #writing-space #date {
+	padding: 5px 7px;
+	font-family: arial;
+	font-size: 1em;
+	color: #000000;
+	border: none;
+	border-bottom: 1px solid #999999;
+}
+
+#writing-space #subject {
+	margin-right: 20px;
+}
+
+#writing-space #subject:focus, #writing-space #date:focus {
+	background-color: #ffe6e6;
+	border-bottom: 1px solid #ff4d4d;
+	outline: none;
+}
+
+#writing-space #entry-text {
+	display: block;
+	width: 90%;
+	margin: 20px auto;
+	padding: 15px;
+	box-sizing: border-box;
+	resize: none;
+	background-color: #ffffe6;
+	font-family: arial;
+	font-size: 1em;
+	border: none;
+	border-radius: 5px;
+	box-shadow: -4px 4px 2px #b3b3b3;
+	overflow: hidden;
+}
+
+#writing-space #entry-text:focus {
+	outline: none;
+}
+
+#writing-space #add-entry {
+	display: block;
+	margin: 0 auto;
+	padding: 7px 10px;
+	background: none;
+	color: #0000ff;
+	font-size: 1.2em;
+	border: none;
+	cursor: pointer;
+}
+
+#writing-space #add-entry:hover {
+	text-decoration: underline;
+}
+
+/* END #writing-space */
+
+#edit-entry {
+	display: none;
+	margin: 0 auto;
+	padding: 7px;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+
+/* START #all-entries */
+
+#your-entries {
+	margin: 50px 0 20px 0;
+	text-align: center;
+}
+
+#no-entries {
+	display: none;
+	text-align: center;
+}
+
+#all-entries {
+	width: 70%;
+	margin: 0 auto 10px auto;
+	font-family: arial;
+	border-collapse: collapse;
+	overflow-x: auto;
+}
+
+#all-entries th, #all-entries td {
+	padding: 10px;
+}
+
+#all-entries th {
+	background-color: #ffa366;
+}
+
+#all-entries th:first-of-type {
+	border-radius: 10px 0 0 0;
+}
+
+#all-entries th:last-of-type {
+	border-radius: 0 10px 0 0;
+}
+
+#all-entries td {
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#all-entries td.del-entry-button {
+	color: #ff0000;
+	cursor: pointer;
+}
+
+#all-entries td.del-entry-button:hover {
+	text-decoration: underline;
+}
+
+#all-entries td.entry-link {
+	color: #0000ff;
+	cursor: pointer;
+}
+
+#all-entries td.entry-link:hover {
+	text-decoration: underline;
+}
+
+#all-entries td:nth-child(1) {
+	text-align: center;
+}
+
+/* Select all of the Subject tds */
+#all-entries td:nth-child(2n) {
+	max-width: 150px;
+}
+
+#all-entries tr:last-of-type td:nth-last-child(4) {
+	border-radius: 0 0 0 10px;
+}
+
+#all-entries tr:last-of-type td:last-child {
+	border-radius: 0 0 10px 0;
+}
+
+#all-entries .help-cursor {
+	cursor: help;
+}
+
+#all-entries tr:nth-child(even) {
+	background-color: #cccccc;
+}
+
+#all-entries tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+
+/* END #all-entries */
+
+
+
+/* START #view-all-entries */
+
+#view-all-entries {
+	display: block;
+	margin: 0 auto 30px auto;
+	background: none;
+	font-size: 0.8em;
+	color: #0000ff;
+	text-decoration: underline;
+	border: none;
+	cursor: pointer;
+}
+
+/* END #view-all-entries */
+
+
+
+/* START #delete-all-entries */
+
+#delete-all-entries {
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	background-image: linear-gradient(to bottom, #ff0000, #ff8080);
+	font-size: 1em;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #ffb3b3;
+	cursor: pointer;
+}
+
+#delete-all-entries:hover {
+	background-image: linear-gradient(to top, #ff0000, #ff8080);
+}
+
+/* END #delete-all-entries */
+
+
+/* MOBILE VERSION */
+
+@media screen and (max-width: 518px) {
+	#writing-space {
+		width: 100%;
+	}
+	
+	#writing-space #entry-info .wrapper {
+		display: block;
+	}
+}
